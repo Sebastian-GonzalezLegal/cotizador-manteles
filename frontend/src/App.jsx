@@ -107,7 +107,8 @@ export default function App() {
     if (!cotizacion) return; 
     setIsRedirecting(true);
     try {
-      const response = await fetch(`https://cotizador-manteles.onrender.com/api/checkout`, {
+      // Usamos API_URL que apunta a localhost en desarrollo, y a Render en producción
+      const response = await fetch(`${API_URL}/api/checkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

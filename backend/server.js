@@ -174,8 +174,8 @@ app.post('/api/checkout', async (req, res) => {
 
     const newProduct = await response.json();
     
-    // Extraemos la URL (permalink) del producto creado
-    const productUrl = newProduct.permalink || (newProduct.urls && newProduct.urls.es);
+    // Extraemos la URL (canonical_url) del producto creado
+    const productUrl = newProduct.canonical_url;
     
     if (!productUrl) {
       return res.status(500).json({ error: 'No se pudo obtener la URL del producto' });
