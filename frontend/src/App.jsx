@@ -32,6 +32,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [cotizacion, setCotizacion] = useState(null);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
   // 3. Efecto para re-calcular cotizaciones previas si es necesario
   // Evitamos llamadas innecesarias, pero permitimos cotizar automáticamente
@@ -100,6 +101,42 @@ export default function App() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
     }).format(valor);
+  };
+
+  const handlePagar = async () => {
+    if (!cotizacion) return; 
+    setIsRedirecting(true);
+    try {
+      const response = await fetch(`https://cotizador-manteles.onrender.com/api/checkout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ancho: cotizacion.anchoCm,
+          largo: cotizacion.largoCm,
+          materialName: cotizacion.materialName,
+          total: cotizacion.total
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error('No se pudo generar el link de pago');
+      }
+
+      const data = await response.json();
+      
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert('Hubo un problema al obtener el enlace. Intentá de nuevo.');
+      }
+    } catch (error) {
+      console.error('Error de pago:', error);
+      alert('Ocurrió un error al intentar conectarse al checkout.');
+    } finally {
+      setIsRedirecting(false); 
+    }
   };
 
   // 5. Lógica del Visualizador Dinámico
@@ -244,6 +281,47 @@ export default function App() {
                 <span>Total Estimado:</span>
                 <span className="price-accent">{formatPesos(cotizacion.total)}</span>
               </div>
+
+              <button 
+                onClick={handlePagar} 
+                disabled={isRedirecting}
+                style={{ 
+                  marginTop: '1.5rem',
+                  padding: '1rem',
+                  cursor: isRedirecting ? 'not-allowed' : 'pointer',
+                  backgroundColor: isRedirecting ? '#ccc' : '#000',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: '6px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  width: '100%',
+                  fontWeight: 'bold',
+                  fontSize: '1.1rem',
+                  transition: 'background-color 0.2s'
+                }}
+              >
+                {isRedirecting ? (
+                  <>
+                    <div className="spinner-css" style={{
+                      border: '2px solid rgba(255,255,255,0.3)',
+                      borderTop: '2px solid #fff',
+                      borderRadius: '50%',
+                      width: '18px',
+                      height: '18px',
+                      animation: 'spin 1s linear infinite'
+                    }}></div>
+                    <style>{`
+                      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                    `}</style>
+                    Redirigiendo a Tiendanube...
+                  </>
+                ) : (
+                  'Añadir al Carrito y Pagar'
+                )}
+              </button>
             </div>
           )}
         </div>
