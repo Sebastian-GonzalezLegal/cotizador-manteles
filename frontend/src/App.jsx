@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { 
-  Calculator, 
-  Layers, 
-  Maximize2, 
-  HelpCircle, 
-  ChevronDown, 
-  Search, 
-  User, 
+import {
+  Calculator,
+  Layers,
+  Maximize2,
+  HelpCircle,
+  ChevronDown,
+  Search,
+  User,
   ShoppingBag,
   Info,
   Check
@@ -46,7 +46,7 @@ export default function App() {
       setLoading(true);
       setError('');
     }
-    
+
     // Validaciones rápidas en Frontend
     if (!ancho || ancho <= 0) {
       if (!silencioso) setError('El ancho debe ser un número positivo.');
@@ -60,7 +60,7 @@ export default function App() {
     }
 
     try {
-      const response = await fetch(`${API_URL}/api/cotizar`, {
+      const response = await fetch(`https://cotizador-manteles.onrender.com/api/cotizar`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -121,7 +121,7 @@ export default function App() {
     <div className="main-wrapper">
       {/* Rejilla de Trabajo */}
       <div className="calculator-grid">
-        
+
         {/* Columna Izquierda: Formulario e Ingreso de Datos */}
         <div className="asturias-card">
           <div className="card-title">
@@ -209,12 +209,12 @@ export default function App() {
           {cotizacion && (
             <div className="result-container">
               <h3 className="receipt-title">Resumen de Cotización</h3>
-              
+
               <div className="receipt-row">
                 <span>Dimensiones:</span>
                 <span className="receipt-row-val">{cotizacion.anchoCm} cm x {cotizacion.largoCm} cm</span>
               </div>
-              
+
               <div className="receipt-row">
                 <span>Superficie Total:</span>
                 <span className="receipt-row-val">{cotizacion.areaM2} m²</span>
@@ -251,13 +251,13 @@ export default function App() {
         {/* Columna Derecha: Visualizador Interactivo */}
         <div className="visualizer-container">
           <span className="visualizer-title">Vista Previa del Mantel en Mesa</span>
-          
+
           <div className="table-stage">
             {/* Estructura de la Mesa de madera */}
             <div className="table-base"></div>
-            
+
             {/* El Mantel dinámico sobre la mesa */}
-            <div 
+            <div
               className={`cloth-overlay material-${material}`}
               style={{
                 width: clothStyles.width,
