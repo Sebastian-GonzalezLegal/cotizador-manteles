@@ -10,7 +10,8 @@ const PORT = process.env.PORT || 3001;
 const allowedOrigins = [
   'http://localhost:5173',
   'http://127.0.0.1:5173',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'https://cotizador-manteles.vercel.app'
 ];
 
 app.use(cors({
