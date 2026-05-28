@@ -139,46 +139,67 @@ app.post('/api/checkout', async (req, res) => {
   try {
     const { ancho, largo, materialName, total } = req.body;
 
-    // Obtenemos las credenciales desde las variables de entorno, y removemos posibles saltos de línea (\r) de Windows
     const storeId = (process.env.TIENDANUBE_STORE_ID || '').trim();
     const accessToken = (process.env.TIENDANUBE_ACCESS_TOKEN || '').trim();
 
-    // Armamos el cuerpo de la petición según la API de Tiendanube
+    // Armamos el nombre exacto que va a funcionar como "DNI" del producto
+    const productName = `Mantel a Medida (${ancho}x${largo} cm) - ${materialName}`;
+
+    const headers = {
+      'Authentication': `bearer ${accessToken}`,
+      'User-Agent': 'AsturiasMarketApp (contacto@asturiasmarket.com)',
+      'Content-Type': 'application/json'
+    };
+
+    // --- PASO 1: BUSCAR SI EL PRODUCTO YA EXISTE ---
+    const searchResponse = await fetch(`https://api.tiendanube.com/v1/${storeId}/products?q=${encodeURIComponent(productName)}`, {
+      method: 'GET',
+      headers: headers
+    });
+
+    if (searchResponse.ok) {
+      const existingProducts = await searchResponse.json();
+      // Buscamos coincidencia exacta de nombre
+      const exactMatch = existingProducts.find(p => p.name.es === productName);
+
+      if (exactMatch) {
+        console.log("♻️ Producto existente encontrado. Reciclando link...");
+        const productUrl = exactMatch.canonical_url || (exactMatch.urls && exactMatch.urls.es);
+        return res.json({ url: productUrl });
+      }
+    }
+
+    // --- PASO 2: SI NO EXISTE, LO CREAMOS ---
+    console.log("✨ Producto nuevo. Creando en Tiendanube con Tag oculto...");
     const productData = {
-      name: { es: `Mantel a Medida (${ancho}x${largo} cm) - ${materialName}` },
-      published: true, // Visibilidad activada para que se pueda comprar
+      name: { es: productName },
+      published: true,
+      tags: "cotizador-automatico", // <-- ESTA ES LA LÍNEA MÁGICA
       variants: [
         {
           price: total,
-          stock: 1 // Stock de 1 porque es a medida y único para este cliente
+          stock: 999 // AUMENTAMOS EL STOCK
         }
       ]
     };
 
-    // Llamada a la API de Tiendanube
-    const response = await fetch(`https://api.tiendanube.com/v1/${storeId}/products`, {
+    const createResponse = await fetch(`https://api.tiendanube.com/v1/${storeId}/products`, {
       method: 'POST',
-      headers: {
-        'Authentication': `bearer ${accessToken}`,
-        'User-Agent': 'AsturiasMarketApp (contacto@asturiasmarket.com)',
-        'Content-Type': 'application/json'
-      },
+      headers: headers,
       body: JSON.stringify(productData)
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
+    if (!createResponse.ok) {
+      const errorText = await createResponse.text();
       console.error('Error desde Tiendanube:', errorText);
       return res.status(500).json({ error: 'Error al crear el checkout en la tienda' });
     }
 
-    const newProduct = await response.json();
-
-    // Extraemos la URL y generamos un link directo al checkout para evitar el error 404
-    // de cuando Tiendanube demora en indexar la página del producto nuevo.
+    const newProduct = await createResponse.json();
     const productUrl = newProduct.canonical_url || (newProduct.urls && newProduct.urls.es);
-    // Devolvemos la URL oficial y segura del producto creado en Tiendanube
+
     res.json({ url: productUrl });
+
   } catch (error) {
     console.error('Error en /api/checkout:', error);
     res.status(500).json({ error: 'Error interno del servidor: ' + error.message });
