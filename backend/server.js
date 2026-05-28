@@ -90,9 +90,9 @@ app.post('/api/cotizar', (req, res) => {
     // 2. Lógica del Cálculo
     let anchoMesaNum = m1Num;
     let largoMesaNum = forma === 'rectangular' ? m2Num : m1Num;
-    
+
     // Para mesas redondas, la caja delimitadora (bounding box) es diámetro x diámetro
-    
+
     let anchoMantelNum = anchoMesaNum;
     let largoMantelNum = largoMesaNum;
 
@@ -157,64 +157,70 @@ app.post('/api/cotizar', (req, res) => {
 app.post('/api/checkout', async (req, res) => {
   try {
     const { formaName, medidasMesaStr, lineaName, estiloName, total } = req.body;
-    
-    // Obtenemos las credenciales desde las variables de entorno, y removemos posibles saltos de línea (\r) de Windows
+
+    // Obtenemos las credenciales desde las variables de entorno
     const storeId = (process.env.TIENDANUBE_STORE_ID || '').trim();
     const accessToken = (process.env.TIENDANUBE_ACCESS_TOKEN || '').trim();
-    
-    // Armamos el cuerpo de la petición según la API de Tiendanube
+
+    // Armamos el nombre exacto que va a funcionar como "DNI" del producto
+    const productName = `Mantel ${formaName} ${estiloName} - ${lineaName} (Mesa ${medidasMesaStr})`;
+
+    const headers = {
+      'Authentication': `bearer ${accessToken}`,
+      'User-Agent': 'AsturiasMarketApp (contacto@asturiasmarket.com)',
+      'Content-Type': 'application/json'
+    };
+
+    // --- PASO 1: BUSCAR SI EL PRODUCTO YA EXISTE ---
+    const searchResponse = await fetch(`https://api.tiendanube.com/v1/${storeId}/products?q=${encodeURIComponent(productName)}`, {
+      method: 'GET',
+      headers: headers
+    });
+
+    if (searchResponse.ok) {
+      const existingProducts = await searchResponse.json();
+      // Buscamos coincidencia exacta de nombre
+      const exactMatch = existingProducts.find(p => p.name.es === productName);
+
+      if (exactMatch) {
+        console.log("♻️ Producto existente encontrado. Reciclando link...");
+        const productUrl = exactMatch.canonical_url || (exactMatch.urls && exactMatch.urls.es);
+        return res.json({ url: productUrl });
+      }
+    }
+
+    // --- PASO 2: SI NO EXISTE, LO CREAMOS ---
+    console.log("✨ Producto nuevo. Creando en Tiendanube con Tag oculto...");
     const productData = {
-      name: { es: `Mantel ${formaName} ${estiloName} - ${lineaName} (Mesa ${medidasMesaStr})` },
-      published: true, // Visibilidad activada para que se pueda comprar
+      name: { es: productName },
+      published: true,
+      tags: "cotizador-automatico", // Etiqueta para borrar fácil después
       variants: [
         {
           price: total,
-          stock: 1 // Stock de 1 porque es a medida y único para este cliente
+          stock: 999 // Stock alto para que no se agote si reciclamos el link
         }
       ]
     };
 
-    // Llamada a la API de Tiendanube
-    const response = await fetch(`https://api.tiendanube.com/v1/${storeId}/products`, {
+    const createResponse = await fetch(`https://api.tiendanube.com/v1/${storeId}/products`, {
       method: 'POST',
-      headers: {
-        'Authentication': `bearer ${accessToken}`,
-        'User-Agent': 'AsturiasMarketApp (contacto@asturiasmarket.com)', 
-        'Content-Type': 'application/json'
-      },
+      headers: headers,
       body: JSON.stringify(productData)
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
+    if (!createResponse.ok) {
+      const errorText = await createResponse.text();
       console.error('Error desde Tiendanube:', errorText);
-      return res.status(500).json({ error: 'Error al crear el checkout en la tienda' });
+      return res.status(500).json({ error: 'Error al crear el producto en la tienda' });
     }
 
-    const newProduct = await response.json();
-    
+    const newProduct = await createResponse.json();
+
+    // Devolvemos la URL oficial del producto (soluciona el error del Hash y Checkout)
     const productUrl = newProduct.canonical_url || (newProduct.urls && newProduct.urls.es);
-    
-    if (!newProduct.variants || newProduct.variants.length === 0) {
-      return res.status(500).json({ error: 'No se pudo generar la ruta de pago, la variante no existe' });
-    }
+    res.json({ url: productUrl });
 
-    // Armamos la URL directa al checkout usando el origin de la tienda y el ID de la variante
-    let storeOrigin = 'https://tiendaasturiasmarket.mitiendanube.com';
-    try {
-      if (productUrl) {
-        storeOrigin = new URL(productUrl).origin;
-      }
-    } catch (err) {
-      console.error('URL inválida devuelta por Tiendanube:', productUrl);
-    }
-
-    const variantId = newProduct.variants[0].id;
-    const checkoutUrl = `${storeOrigin}/checkout/v3/start/${variantId}/1/`;
-
-    // Le devolvemos la URL directa de pago al frontend
-    res.json({ url: checkoutUrl });
-    
   } catch (error) {
     console.error('Error en /api/checkout:', error);
     res.status(500).json({ error: 'Error interno del servidor: ' + error.message });
