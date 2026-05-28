@@ -139,9 +139,9 @@ app.post('/api/checkout', async (req, res) => {
   try {
     const { ancho, largo, materialName, total } = req.body;
     
-    // Obtenemos las credenciales desde las variables de entorno
-    const storeId = process.env.TIENDANUBE_STORE_ID;
-    const accessToken = process.env.TIENDANUBE_ACCESS_TOKEN;
+    // Obtenemos las credenciales desde las variables de entorno, y removemos posibles saltos de línea (\r) de Windows
+    const storeId = (process.env.TIENDANUBE_STORE_ID || '').trim();
+    const accessToken = (process.env.TIENDANUBE_ACCESS_TOKEN || '').trim();
     
     // Armamos el cuerpo de la petición según la API de Tiendanube
     const productData = {
