@@ -176,14 +176,22 @@ app.post('/api/checkout', async (req, res) => {
     
     // Extraemos la URL y generamos un link directo al checkout para evitar el error 404
     // de cuando Tiendanube demora en indexar la página del producto nuevo.
-    const productUrl = newProduct.canonical_url;
+    const productUrl = newProduct.canonical_url || (newProduct.urls && newProduct.urls.es);
     
-    if (!productUrl || !newProduct.variants || newProduct.variants.length === 0) {
-      return res.status(500).json({ error: 'No se pudo generar la ruta de pago' });
+    if (!newProduct.variants || newProduct.variants.length === 0) {
+      return res.status(500).json({ error: 'No se pudo generar la ruta de pago, la variante no existe' });
     }
 
     // Armamos la URL directa al checkout usando el origin de la tienda y el ID de la variante
-    const storeOrigin = new URL(productUrl).origin;
+    let storeOrigin = 'https://tiendaasturiasmarket.mitiendanube.com';
+    try {
+      if (productUrl) {
+        storeOrigin = new URL(productUrl).origin;
+      }
+    } catch (err) {
+      console.error('URL inválida devuelta por Tiendanube:', productUrl);
+    }
+
     const variantId = newProduct.variants[0].id;
     const checkoutUrl = `${storeOrigin}/checkout/v3/start/${variantId}/1/`;
 
