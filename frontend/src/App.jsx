@@ -104,11 +104,11 @@ export default function App() {
   };
 
   const handlePagar = async () => {
-    if (!cotizacion) return; 
+    if (!cotizacion) return;
     setIsRedirecting(true);
     try {
       // Usamos API_URL que apunta a localhost en desarrollo, y a Render en producción
-      const response = await fetch(`${API_URL}/api/checkout`, {
+      const response = await fetch(`https://cotizador-manteles.onrender.com/api/checkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -126,12 +126,12 @@ export default function App() {
         try {
           const errData = await response.json();
           if (errData.error) errStr += ' - ' + errData.error;
-        } catch(e) {}
+        } catch (e) { }
         throw new Error(errStr);
       }
 
       const data = await response.json();
-      
+
       if (data.url) {
         // Redirigir usando window.top para evitar problemas si está embebido (CSP)
         window.top.location.href = data.url;
@@ -142,7 +142,7 @@ export default function App() {
       console.error('Error de pago:', error);
       alert('Ocurrió un error al intentar conectarse al checkout.');
     } finally {
-      setIsRedirecting(false); 
+      setIsRedirecting(false);
     }
   };
 
@@ -289,10 +289,10 @@ export default function App() {
                 <span className="price-accent">{formatPesos(cotizacion.total)}</span>
               </div>
 
-              <button 
-                onClick={handlePagar} 
+              <button
+                onClick={handlePagar}
                 disabled={isRedirecting}
-                style={{ 
+                style={{
                   marginTop: '1.5rem',
                   padding: '1rem',
                   cursor: isRedirecting ? 'not-allowed' : 'pointer',
