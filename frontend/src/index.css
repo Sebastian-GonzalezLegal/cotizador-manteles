@@ -473,6 +473,38 @@ body {
 .material-simil_lino .cloth-drape { background-color: #e2d7c5; }
 .material-cristal .cloth-drape { background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(2px); }
 
+/* Measure Labels */
+.measure-badge {
+  position: absolute;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--brand-taupe);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px dashed var(--brand-taupe-light);
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  z-index: 20;
+  pointer-events: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-x {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.badge-y {
+  right: 5px;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
 /* Dimension details displayed on visualizer */
 .visualizer-dimensions {
   margin-top: 32px;

@@ -9,7 +9,9 @@ import {
   User,
   ShoppingBag,
   Info,
-  Check
+  Check,
+  ArrowLeftRight,
+  ArrowUpDown
 } from 'lucide-react';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
@@ -65,8 +67,17 @@ export default function App() {
   const [error, setError] = useState('');
   const [cotizacion, setCotizacion] = useState(null);
   const [isRedirecting, setIsRedirecting] = useState(false);
+  const [isOutdated, setIsOutdated] = useState(false);
 
   const estilosPermitidos = ESTILOS_DISPONIBLES[linea]?.[forma] || [];
+
+  // Marcar como desactualizado si cambia algún valor
+  useEffect(() => {
+    if (cotizacion) {
+      setIsOutdated(true);
+      setCheckoutUrl(null);
+    }
+  }, [forma, medida1, medida2, linea, estilo]);
 
   // Ajustar estilo si no es válido para la combinación
   useEffect(() => {
@@ -115,6 +126,7 @@ export default function App() {
 
       if (response.ok && result.success) {
         setCotizacion(result.data);
+        setIsOutdated(false);
       } else {
         setError(result.error || 'Ocurrió un error al calcular el presupuesto.');
       }
@@ -326,8 +338,34 @@ export default function App() {
                   ✅ ¡Producto listo! Clic aquí para Pagar
                 </a>
               ) : (
-                <button onClick={handlePagar} disabled={isRedirecting} style={{ marginTop: '1.5rem', padding: '1rem', cursor: isRedirecting ? 'not-allowed' : 'pointer', backgroundColor: isRedirecting ? '#ccc' : '#000', color: '#fff', border: 'none', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', width: '100%', fontWeight: 'bold', fontSize: '1.1rem', transition: 'background-color 0.2s' }}>
-                  {isRedirecting ? <><div className="spinner-css" style={{ border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', width: '18px', height: '18px', animation: 'spin 1s linear infinite' }}></div> Redirigiendo a Tiendanube...</> : 'Añadir al Carrito y Pagar'}
+                <button 
+                  onClick={handlePagar} 
+                  disabled={isRedirecting || isOutdated} 
+                  style={{ 
+                    marginTop: '1.5rem', 
+                    padding: '1rem', 
+                    cursor: (isRedirecting || isOutdated) ? 'not-allowed' : 'pointer', 
+                    backgroundColor: (isRedirecting || isOutdated) ? '#ccc' : '#000', 
+                    color: '#fff', 
+                    border: 'none', 
+                    borderRadius: '6px', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    gap: '10px', 
+                    width: '100%', 
+                    fontWeight: 'bold', 
+                    fontSize: '1.1rem', 
+                    transition: 'background-color 0.2s' 
+                  }}
+                >
+                  {isRedirecting ? (
+                    <><div className="spinner-css" style={{ border: '2px solid rgba(255,255,255,0.3)', borderTop: '2px solid #fff', borderRadius: '50%', width: '18px', height: '18px', animation: 'spin 1s linear infinite' }}></div> Redirigiendo a Tiendanube...</>
+                  ) : isOutdated ? (
+                    'Calculá el precio para continuar'
+                  ) : (
+                    'Añadir al Carrito y Pagar'
+                  )}
                 </button>
               )}
             </div>
@@ -342,6 +380,22 @@ export default function App() {
               <span className="cloth-label">{LINEAS_OPCIONES.find(op => op.id === linea)?.name.split(' ')[1]}</span>
               {estilo === 'con_caida' && <div className="cloth-drape" style={{ borderRadius: styles.tableBorderRadius }}></div>}
             </div>
+            
+            {forma === 'rectangular' && (
+              <>
+                <div className="measure-badge badge-x">
+                  <ArrowLeftRight size={12} /> Largo: {medida2 || 0} cm
+                </div>
+                <div className="measure-badge badge-y">
+                  <ArrowUpDown size={12} /> Ancho: {medida1 || 0} cm
+                </div>
+              </>
+            )}
+            {(forma === 'cuadrado' || forma === 'redondo') && (
+              <div className="measure-badge badge-x">
+                <ArrowLeftRight size={12} /> {forma === 'redondo' ? 'Diámetro' : 'Lado'}: {medida1 || 0} cm
+              </div>
+            )}
           </div>
           <div className="visualizer-dimensions">
             <div className="dimension-badge"><Layers size={14} className="price-accent" /><span>{forma === 'redondo' ? 'Diámetro' : 'Ancho'}: {medida1 || 0} cm</span></div>
