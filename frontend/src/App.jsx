@@ -122,7 +122,12 @@ export default function App() {
       });
 
       if (!response.ok) {
-        throw new Error('No se pudo generar el link de pago');
+        let errStr = 'No se pudo generar el link de pago';
+        try {
+          const errData = await response.json();
+          if (errData.error) errStr += ' - ' + errData.error;
+        } catch(e) {}
+        throw new Error(errStr);
       }
 
       const data = await response.json();

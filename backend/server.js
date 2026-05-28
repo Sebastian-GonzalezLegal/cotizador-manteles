@@ -200,7 +200,7 @@ app.post('/api/checkout', async (req, res) => {
     
   } catch (error) {
     console.error('Error en /api/checkout:', error);
-    res.status(500).json({ error: 'Error interno del servidor al procesar el pago' });
+    res.status(500).json({ error: 'Error interno del servidor: ' + error.message });
   }
 });
 
