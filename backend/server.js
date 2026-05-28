@@ -174,15 +174,21 @@ app.post('/api/checkout', async (req, res) => {
 
     const newProduct = await response.json();
     
-    // Extraemos la URL (canonical_url) del producto creado
+    // Extraemos la URL y generamos un link directo al checkout para evitar el error 404
+    // de cuando Tiendanube demora en indexar la página del producto nuevo.
     const productUrl = newProduct.canonical_url;
     
-    if (!productUrl) {
-      return res.status(500).json({ error: 'No se pudo obtener la URL del producto' });
+    if (!productUrl || !newProduct.variants || newProduct.variants.length === 0) {
+      return res.status(500).json({ error: 'No se pudo generar la ruta de pago' });
     }
 
-    // Le devolvemos la URL al frontend
-    res.json({ url: productUrl });
+    // Armamos la URL directa al checkout usando el origin de la tienda y el ID de la variante
+    const storeOrigin = new URL(productUrl).origin;
+    const variantId = newProduct.variants[0].id;
+    const checkoutUrl = `${storeOrigin}/checkout/v3/start/${variantId}/1/`;
+
+    // Le devolvemos la URL directa de pago al frontend
+    res.json({ url: checkoutUrl });
     
   } catch (error) {
     console.error('Error en /api/checkout:', error);

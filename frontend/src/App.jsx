@@ -128,7 +128,8 @@ export default function App() {
       const data = await response.json();
       
       if (data.url) {
-        window.location.href = data.url;
+        // Redirigir usando window.top para evitar problemas si está embebido (CSP)
+        window.top.location.href = data.url;
       } else {
         alert('Hubo un problema al obtener el enlace. Intentá de nuevo.');
       }
