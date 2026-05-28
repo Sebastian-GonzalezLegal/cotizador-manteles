@@ -23,6 +23,8 @@ const MATERIALES_OPCIONES = [
 ];
 
 export default function App() {
+  const [checkoutUrl, setCheckoutUrl] = useState(null);
+
   // 1. Estados del Formulario
   const [ancho, setAncho] = useState(140);
   const [largo, setLargo] = useState(200);
@@ -106,8 +108,8 @@ export default function App() {
   const handlePagar = async () => {
     if (!cotizacion) return;
     setIsRedirecting(true);
+    setCheckoutUrl(null); // Reseteamos si había un link anterior
     try {
-      // Usamos API_URL que apunta a localhost en desarrollo, y a Render en producción
       const response = await fetch(`https://cotizador-manteles.onrender.com/api/checkout`, {
         method: 'POST',
         headers: {
@@ -122,26 +124,25 @@ export default function App() {
       });
 
       if (!response.ok) {
-        let errStr = 'No se pudo generar el link de pago';
-        try {
-          const errData = await response.json();
-          if (errData.error) errStr += ' - ' + errData.error;
-        } catch (e) { }
-        throw new Error(errStr);
+        throw new Error('No se pudo generar el link de pago');
       }
 
       const data = await response.json();
 
       if (data.url) {
-        // Redirigir usando window.top para evitar problemas si está embebido (CSP)
-        window.top.location.href = data.url;
+        // TRUCO DE TIEMPO: Esperamos 3 segundos antes de mostrar el botón
+        // para darle tiempo a los servidores de Tiendanube a publicar la página
+        setTimeout(() => {
+          setCheckoutUrl(data.url);
+          setIsRedirecting(false);
+        }, 3000);
       } else {
         alert('Hubo un problema al obtener el enlace. Intentá de nuevo.');
+        setIsRedirecting(false);
       }
     } catch (error) {
       console.error('Error de pago:', error);
       alert('Ocurrió un error al intentar conectarse al checkout.');
-    } finally {
       setIsRedirecting(false);
     }
   };
@@ -289,46 +290,70 @@ export default function App() {
                 <span className="price-accent">{formatPesos(cotizacion.total)}</span>
               </div>
 
-              <button
-                onClick={handlePagar}
-                disabled={isRedirecting}
-                style={{
-                  marginTop: '1.5rem',
-                  padding: '1rem',
-                  cursor: isRedirecting ? 'not-allowed' : 'pointer',
-                  backgroundColor: isRedirecting ? '#ccc' : '#000',
-                  color: '#fff',
-                  border: 'none',
-                  borderRadius: '6px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '10px',
-                  width: '100%',
-                  fontWeight: 'bold',
-                  fontSize: '1.1rem',
-                  transition: 'background-color 0.2s'
-                }}
-              >
-                {isRedirecting ? (
-                  <>
-                    <div className="spinner-css" style={{
-                      border: '2px solid rgba(255,255,255,0.3)',
-                      borderTop: '2px solid #fff',
-                      borderRadius: '50%',
-                      width: '18px',
-                      height: '18px',
-                      animation: 'spin 1s linear infinite'
-                    }}></div>
-                    <style>{`
-                      @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-                    `}</style>
-                    Redirigiendo a Tiendanube...
-                  </>
-                ) : (
-                  'Añadir al Carrito y Pagar'
-                )}
-              </button>
+              {checkoutUrl ? (
+                <a
+                  href={checkoutUrl}
+                  target="_top"
+                  style={{
+                    marginTop: '1.5rem',
+                    padding: '1rem',
+                    backgroundColor: '#2e7d32',
+                    color: '#fff',
+                    textDecoration: 'none',
+                    borderRadius: '6px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontWeight: 'bold',
+                    fontSize: '1.1rem',
+                    transition: 'background-color 0.2s',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                  }}
+                >
+                  ✅ ¡Producto listo! Clic aquí para Pagar
+                </a>
+              ) : (
+                <button
+                  onClick={handlePagar}
+                  disabled={isRedirecting}
+                  style={{
+                    marginTop: '1.5rem',
+                    padding: '1rem',
+                    cursor: isRedirecting ? 'not-allowed' : 'pointer',
+                    backgroundColor: isRedirecting ? '#ccc' : '#000',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '6px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '10px',
+                    width: '100%',
+                    fontWeight: 'bold',
+                    fontSize: '1.1rem',
+                    transition: 'background-color 0.2s'
+                  }}
+                >
+                  {isRedirecting ? (
+                    <>
+                      <div className="spinner-css" style={{
+                        border: '2px solid rgba(255,255,255,0.3)',
+                        borderTop: '2px solid #fff',
+                        borderRadius: '50%',
+                        width: '18px',
+                        height: '18px',
+                        animation: 'spin 1s linear infinite'
+                      }}></div>
+                      <style>{`
+                        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+                      `}</style>
+                      Generando producto a medida...
+                    </>
+                  ) : (
+                    'Añadir al Carrito y Pagar'
+                  )}
+                </button>
+              )}
             </div>
           )}
         </div>
