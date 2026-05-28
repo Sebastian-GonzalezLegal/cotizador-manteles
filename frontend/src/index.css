@@ -382,7 +382,7 @@ body {
   transform: rotateX(45deg);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   border-radius: 6px;
-  position: relative;
+  position: absolute;
   transition: var(--transition-smooth);
 }
 
@@ -394,7 +394,7 @@ body {
   height: 80px;
   background: #cdc7c1;
   border-left: 2px solid #bdafa4;
-  top: 100px;
+  top: calc(100% - 20px);
 }
 .table-base::before { left: 15px; }
 .table-base::after { right: 15px; }
@@ -417,26 +417,20 @@ body {
 }
 
 /* Material Colors & Textures */
-.material-ecocuero_premium {
-  /* Castaño / Brown */
-  background: linear-gradient(135deg, #513e33 0%, #3a2b22 100%);
-  border: 2px dashed rgba(255,255,255,0.15);
-}
-
-.material-ecocuero_beige {
+.material-ecocuero {
   /* Beige / Sand */
   background: linear-gradient(135deg, #dfd5c6 0%, #c5bba8 100%);
   border: 2px dashed rgba(122, 102, 89, 0.25);
 }
 
-.material-tela_antimanchas {
+.material-simil_lino {
   /* Light structured texture */
   background: radial-gradient(circle, #f3ede2 20%, #e2d7c5 100%);
   background-size: 6px 6px;
   border: 1px solid rgba(122, 102, 89, 0.2);
 }
 
-.material-pvc_cristal {
+.material-cristal {
   /* Frosted Glassmorphism PVC */
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(4px);
@@ -454,8 +448,9 @@ body {
 }
 
 /* PVC has a dark label for legibility */
-.material-pvc_cristal .cloth-label,
-.material-ecocuero_beige .cloth-label {
+.material-cristal .cloth-label,
+.material-ecocuero .cloth-label,
+.material-simil_lino .cloth-label {
   color: var(--text-primary);
   text-shadow: none;
 }
@@ -474,10 +469,9 @@ body {
   transition: var(--transition-smooth);
 }
 
-.material-ecocuero_premium .cloth-drape { background-color: #3a2b22; }
-.material-ecocuero_beige .cloth-drape { background-color: #c5bba8; }
-.material-tela_antimanchas .cloth-drape { background-color: #e2d7c5; }
-.material-pvc_cristal .cloth-drape { background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(2px); }
+.material-ecocuero .cloth-drape { background-color: #c5bba8; }
+.material-simil_lino .cloth-drape { background-color: #e2d7c5; }
+.material-cristal .cloth-drape { background-color: rgba(255, 255, 255, 0.5); backdrop-filter: blur(2px); }
 
 /* Dimension details displayed on visualizer */
 .visualizer-dimensions {
