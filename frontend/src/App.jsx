@@ -23,9 +23,8 @@ const FORMAS_OPCIONES = [
 ];
 
 const LINEAS_OPCIONES = [
-  { id: 'simil_lino', name: 'Línea Ecocuero Simil Lino' },
-  { id: 'ecocuero', name: 'Línea Ecocuero' },
-  { id: 'cristal', name: 'Línea Cristal' }
+  { id: 'lino', name: 'Línea Lino' },
+  { id: 'tapir', name: 'Línea Tapir' }
 ];
 
 const ESTILOS_NOMBRES = {
@@ -35,20 +34,15 @@ const ESTILOS_NOMBRES = {
 };
 
 const ESTILOS_DISPONIBLES = {
-  'simil_lino': {
+  'lino': {
     'rectangular': ['con_caida', 'encastrable'],
     'cuadrado': ['con_caida', 'encastrable'],
     'redondo': ['con_caida', 'encastrable', 'ajustable']
   },
-  'ecocuero': {
-    'rectangular': ['encastrable', 'con_caida'],
+  'tapir': {
+    'rectangular': ['con_caida', 'encastrable'],
     'cuadrado': ['con_caida', 'encastrable'],
-    'redondo': ['encastrable', 'con_caida', 'ajustable']
-  },
-  'cristal': {
-    'rectangular': ['encastrable'],
-    'cuadrado': ['encastrable'], // Permitido como variante de rectangular
-    'redondo': ['encastrable']
+    'redondo': ['con_caida', 'encastrable', 'ajustable']
   }
 };
 
@@ -59,8 +53,9 @@ export default function App() {
   const [forma, setForma] = useState('rectangular');
   const [medida1, setMedida1] = useState(140);
   const [medida2, setMedida2] = useState(200);
-  const [linea, setLinea] = useState('simil_lino');
+  const [linea, setLinea] = useState('lino');
   const [estilo, setEstilo] = useState('con_caida');
+  const [agregado, setAgregado] = useState('ninguno');
 
   // 2. Estados de Operación e Integración
   const [loading, setLoading] = useState(false);
@@ -77,7 +72,7 @@ export default function App() {
       setIsOutdated(true);
       setCheckoutUrl(null);
     }
-  }, [forma, medida1, medida2, linea, estilo]);
+  }, [forma, medida1, medida2, linea, estilo, agregado]);
 
   // Ajustar estilo si no es válido para la combinación
   useEffect(() => {
@@ -118,7 +113,8 @@ export default function App() {
           medida1: Number(medida1),
           medida2: forma === 'rectangular' ? Number(medida2) : Number(medida1),
           linea,
-          estilo
+          estilo,
+          agregado
         }),
       });
 
@@ -308,6 +304,15 @@ export default function App() {
               <label className="form-label">Estilo de Confección</label>
               <select className="form-select" value={estilo} onChange={(e) => setEstilo(e.target.value)}>
                 {estilosPermitidos.map(op => <option key={op} value={op}>{ESTILOS_NOMBRES[op]}</option>)}
+              </select>
+            </div>
+
+            <div className="form-group">
+              <label className="form-label">Terminación (Agregado)</label>
+              <select className="form-select" value={agregado} onChange={(e) => setAgregado(e.target.value)}>
+                <option value="ninguno">Sin agregado</option>
+                <option value="bies">Con Bies</option>
+                <option value="flecos">Con Flecos</option>
               </select>
             </div>
             

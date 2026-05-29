@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const { parseExcelData, getPriceFromDb } = require('./excelParser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -30,20 +31,10 @@ app.use(cors({
 // Middleware para procesar JSON en las peticiones
 app.use(express.json());
 
-// Base de datos simulada de Precios por Material (por metro cuadrado)
-const MATERIAL_PRICES = {
-  'simil_lino': {
-    name: 'Línea Ecocuero Simil Lino',
-    pricePerM2: 18000
-  },
-  'ecocuero': {
-    name: 'Línea Ecocuero',
-    pricePerM2: 15000
-  },
-  'cristal': {
-    name: 'Línea Cristal',
-    pricePerM2: 12000
-  }
+// Base de datos de nombres de Materiales (los precios vienen del Excel)
+const MATERIAL_NAMES = {
+  'lino': 'Línea Lino',
+  'tapir': 'Línea Tapir'
 };
 
 const COSTO_FIJO_CONFECCION = 2500;
@@ -61,7 +52,7 @@ app.get('/', (req, res) => {
 // Endpoint POST /api/cotizar
 app.post('/api/cotizar', (req, res) => {
   try {
-    const { forma, medida1, medida2, linea, estilo } = req.body;
+    const { forma, medida1, medida2, linea, estilo, agregado } = req.body;
 
     // 1. Validaciones de Inputs
     const m1Num = parseFloat(medida1);
@@ -79,7 +70,7 @@ app.post('/api/cotizar', (req, res) => {
       return res.status(400).json({ success: false, error: 'El largo es requerido para mesas rectangulares.' });
     }
 
-    if (!linea || !MATERIAL_PRICES[linea]) {
+    if (!linea || !MATERIAL_NAMES[linea]) {
       return res.status(400).json({ success: false, error: 'La línea de material es requerida o no es válida.' });
     }
 
@@ -91,8 +82,6 @@ app.post('/api/cotizar', (req, res) => {
     let anchoMesaNum = m1Num;
     let largoMesaNum = forma === 'rectangular' ? m2Num : m1Num;
 
-    // Para mesas redondas, la caja delimitadora (bounding box) es diámetro x diámetro
-
     let anchoMantelNum = anchoMesaNum;
     let largoMantelNum = largoMesaNum;
 
@@ -101,26 +90,36 @@ app.post('/api/cotizar', (req, res) => {
       anchoMantelNum += 40; // 20cm de cada lado
       largoMantelNum += 40;
     }
-    // Para "encastrable" y "ajustable", las medidas ingresadas son las finales para el cálculo
-
-    // Convertir centímetros a metros
+    
     const anchoMetros = anchoMantelNum / 100;
     const largoMetros = largoMantelNum / 100;
-
-    // Calcular metros cuadrados (m2) envolventes
     const areaM2 = anchoMetros * largoMetros;
 
-    // Obtener precio base del material seleccionado
-    const configMaterial = MATERIAL_PRICES[linea];
-    const precioBaseM2 = configMaterial.pricePerM2;
-
-    // Calcular subtotal de material y total
-    const subtotalMaterial = Math.round(areaM2 * precioBaseM2);
-    const total = subtotalMaterial + COSTO_FIJO_CONFECCION;
-
-    // Generar nombres descriptivos
+    // Generar nombres descriptivos para el error y la respuesta
     const formatNombre = forma.charAt(0).toUpperCase() + forma.slice(1);
-    const estiloNombre = estilo === 'con_caida' ? 'Con Caída' : (estilo === 'encastrable' ? 'Encastrable' : 'Ajustable');
+    let agregadoNombre = '';
+    if (agregado === 'bies') agregadoNombre = ' - Con Bies';
+    else if (agregado === 'flecos') agregadoNombre = ' - Con Flecos';
+    const estiloNombre = (estilo === 'con_caida' ? 'Con Caída' : (estilo === 'encastrable' ? 'Encastrable' : 'Ajustable')) + agregadoNombre;
+
+    // Obtener precio base del Excel
+    const db = parseExcelData();
+    let totalExcel = getPriceFromDb(db, linea, forma, estilo, anchoMesaNum, largoMesaNum, agregado);
+
+    if (totalExcel === null) {
+       return res.status(400).json({ 
+         success: false, 
+         error: `La combinación seleccionada (Mesa ${formatNombre}, Estilo ${estiloNombre}) no está disponible en la lista de precios.` 
+       });
+    }
+
+    // El precio final ya incluye impuestos, confección y todo
+    const total = Math.round(totalExcel);
+    const subtotalMaterial = total; // Para mantener la estructura de datos del Frontend
+    const precioBaseM2 = 0;
+    const configMaterial = { name: MATERIAL_NAMES[linea] };
+
+    // Generar nombres descriptivos (movido arriba para manejo de errores)
     const medidasStr = forma === 'redondo' ? `Ø ${anchoMesaNum}cm` : `${anchoMesaNum}x${largoMesaNum}cm`;
 
     // 3. Respuesta detallada

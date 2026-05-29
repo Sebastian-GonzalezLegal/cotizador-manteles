@@ -1,0 +1,1806 @@
+{
+  "lino": [
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,40",
+      "valorFinal": 54522.93000000001,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,60",
+      "valorFinal": 56548.80000000001,
+      "type": "redondo",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,80",
+      "valorFinal": 64656.90000000001,
+      "type": "redondo",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 2,00",
+      "valorFinal": 70737.975,
+      "type": "redondo",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 2,50",
+      "valorFinal": 83622,
+      "type": "redondo",
+      "medida1": 250,
+      "medida2": 250
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 1,20",
+      "valorFinal": 53348.295000000006,
+      "type": "redondo",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 1,40",
+      "valorFinal": 55114.29000000001,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 1,60",
+      "valorFinal": 61001.32500000001,
+      "type": "redondo",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 1,80",
+      "valorFinal": 63676.30500000001,
+      "type": "redondo",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 2,00",
+      "valorFinal": 72806.58000000002,
+      "type": "redondo",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 2,30",
+      "valorFinal": 91777.45500000002,
+      "type": "redondo",
+      "medida1": 230,
+      "medida2": 230
+    },
+    {
+      "category": "REDONDO SIMIL LINO FLECOS",
+      "desc": "DIAMETRO 2,50",
+      "valorFinal": 92631,
+      "type": "redondo",
+      "medida1": 250,
+      "medida2": 250
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 0,50",
+      "valorFinal": 26414.850000000006,
+      "type": "redondo",
+      "medida1": 50,
+      "medida2": 50
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 0,60",
+      "valorFinal": 37164.435000000005,
+      "type": "redondo",
+      "medida1": 60,
+      "medida2": 60
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 0,70",
+      "valorFinal": 41056.785,
+      "type": "redondo",
+      "medida1": 70,
+      "medida2": 70
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 0,80",
+      "valorFinal": 48839.17500000001,
+      "type": "redondo",
+      "medida1": 80,
+      "medida2": 80
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 0,90",
+      "valorFinal": 50785.35000000001,
+      "type": "redondo",
+      "medida1": 90,
+      "medida2": 90
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,00",
+      "valorFinal": 52731.52500000001,
+      "type": "redondo",
+      "medida1": 100,
+      "medida2": 100
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,10",
+      "valorFinal": 54676.545000000006,
+      "type": "redondo",
+      "medida1": 110,
+      "medida2": 110
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,20",
+      "valorFinal": 56622.72,
+      "type": "redondo",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,30",
+      "valorFinal": 58568.895000000004,
+      "type": "redondo",
+      "medida1": 130,
+      "medida2": 130
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,40",
+      "valorFinal": 60513.91500000001,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,50",
+      "valorFinal": 64406.26500000001,
+      "type": "redondo",
+      "medida1": 150,
+      "medida2": 150
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,60",
+      "valorFinal": 66753.225,
+      "type": "redondo",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "TEXTURADO SIMIL LINO AJUSTABLE",
+      "desc": "REDONDO AJUSTABLE PARA MESA 1,80",
+      "valorFinal": 68297.46,
+      "type": "redondo",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 60 DIAMETRO",
+      "valorFinal": 43534.26000000001,
+      "type": "redondo",
+      "medida1": 60,
+      "medida2": 60
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 70 DIAMETRO",
+      "valorFinal": 47892.07500000001,
+      "type": "redondo",
+      "medida1": 70,
+      "medida2": 70
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 80 DIAMETRO",
+      "valorFinal": 50888.145000000004,
+      "type": "redondo",
+      "medida1": 80,
+      "medida2": 80
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 90 DIAMETRO",
+      "valorFinal": 58242.030000000006,
+      "type": "redondo",
+      "medida1": 90,
+      "medida2": 90
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 100 DIAMETRO",
+      "valorFinal": 59713.50000000001,
+      "type": "redondo",
+      "medida1": 100,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 110 DIAMETRO",
+      "valorFinal": 61183.815,
+      "type": "redondo",
+      "medida1": 110,
+      "medida2": 110
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 120 DIAMETRO",
+      "valorFinal": 62654.13000000001,
+      "type": "redondo",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 130 DIAMETRO",
+      "valorFinal": 64125.60000000001,
+      "type": "redondo",
+      "medida1": 130,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON BIES",
+      "desc": "ENCASTRABLE PARA REDONDA 140 DIAMETRO",
+      "valorFinal": 66643.50000000001,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 60 DIAMETRO",
+      "valorFinal": 43975.47,
+      "type": "redondo",
+      "medida1": 60,
+      "medida2": 60
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 80 DIAMETRO",
+      "valorFinal": 56623.87500000001,
+      "type": "redondo",
+      "medida1": 80,
+      "medida2": 80
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 90 DIAMETRO",
+      "valorFinal": 59565.66,
+      "type": "redondo",
+      "medida1": 90,
+      "medida2": 90
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 100 DIAMETRO",
+      "valorFinal": 61037.13000000001,
+      "type": "redondo",
+      "medida1": 100,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 110 DIAMETRO",
+      "valorFinal": 62507.44500000001,
+      "type": "redondo",
+      "medida1": 110,
+      "medida2": 110
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 120 DIAMETRO",
+      "valorFinal": 63977.76000000001,
+      "type": "redondo",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 130 DIAMETRO",
+      "valorFinal": 65449.23000000001,
+      "type": "redondo",
+      "medida1": 130,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 140 DIAMETRO",
+      "valorFinal": 68169.255,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 150 DIAMETRO",
+      "valorFinal": 69184.5,
+      "type": "redondo",
+      "medida1": 150,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA REDONDA CON FLECOS",
+      "desc": "ENCASTRABLE PARA REDONDA 160 DIAMETRO",
+      "valorFinal": 69902.91000000002,
+      "type": "redondo",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 X 145 agregado",
+      "valorFinal": 72806.58000000002,
+      "type": "rectangular",
+      "medida1": 145,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 190 X 145 agregado",
+      "valorFinal": 73943.1,
+      "type": "rectangular",
+      "medida1": 145,
+      "medida2": 190
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 420 X 150 agregado",
+      "valorFinal": 121190.68500000001,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 420
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 350 X 150 agregado",
+      "valorFinal": 104914.42500000002,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 350
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 300 X 150 agregado",
+      "valorFinal": 101412.46500000001,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 300
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 300 X 140 agregado",
+      "valorFinal": 96558.00000000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 300
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 280 X 130 agregado",
+      "valorFinal": 92365.35,
+      "type": "rectangular",
+      "medida1": 130,
+      "medida2": 280
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 280 X 180 agregado",
+      "valorFinal": 105105.00000000001,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 280
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 270 X 140 agregado",
+      "valorFinal": 84804.72000000002,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 270
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 275 X 163 agregado - caida 14",
+      "valorFinal": 101041.71000000002,
+      "type": "rectangular",
+      "medida1": 163,
+      "medida2": 275
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 200 X 140 agregado",
+      "valorFinal": 76048.66500000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 125 agregado",
+      "valorFinal": 86325.85500000001,
+      "type": "rectangular",
+      "medida1": 125,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 153 agregado",
+      "valorFinal": 88098.78000000001,
+      "type": "rectangular",
+      "medida1": 153,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 150 agregado",
+      "valorFinal": 88098.78000000001,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 250 x 150 agregado",
+      "valorFinal": 87318,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 250
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 250 X 140 agregado",
+      "valorFinal": 86509.5,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 250
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 246 X 146 agregado",
+      "valorFinal": 86509.5,
+      "type": "rectangular",
+      "medida1": 146,
+      "medida2": 246
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 160 agregado",
+      "valorFinal": 88980.04500000001,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 140 agregado",
+      "valorFinal": 87657.57,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 240 X 150 agregado",
+      "valorFinal": 93670.5,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 230 x 150 agregado",
+      "valorFinal": 92307.6,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 230
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 360 X 80",
+      "valorFinal": 87871.24500000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 360
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 350 X 120",
+      "valorFinal": 86178.01500000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 350
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 340 X 100",
+      "valorFinal": 84804.72000000002,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 340
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 300 X 120",
+      "valorFinal": 80588.97000000002,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 300
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 300 X 110",
+      "valorFinal": 80121.195,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 300
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 300 X 100",
+      "valorFinal": 79862.475,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 300
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 280 X 110",
+      "valorFinal": 79002,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 280
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 280 X 90",
+      "valorFinal": 78655.5,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 280
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 270 X 100",
+      "valorFinal": 79981.44,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 270
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 120",
+      "valorFinal": 78833.37000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 110",
+      "valorFinal": 78574.65000000001,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 260 X 50",
+      "valorFinal": 78833.37000000001,
+      "type": "rectangular",
+      "medida1": 50,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 255 X 105",
+      "valorFinal": 78424.5,
+      "type": "rectangular",
+      "medida1": 105,
+      "medida2": 255
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 250 X 120",
+      "valorFinal": 77508.58500000002,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 250
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 250 X 80",
+      "valorFinal": 75467.7,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 250
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 240 X 120",
+      "valorFinal": 70814.20500000002,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 240 X 110",
+      "valorFinal": 69887.89500000002,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 240 X 100",
+      "valorFinal": 69238.78500000002,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 240 X 61",
+      "valorFinal": 68376.00000000001,
+      "type": "rectangular",
+      "medida1": 61,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 230 X 90",
+      "valorFinal": 68978.91000000002,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 230
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 230 X 120",
+      "valorFinal": 70686,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 230
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 220 X 120",
+      "valorFinal": 68914.23000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 220 X 110",
+      "valorFinal": 68589.67500000002,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 220 X 100",
+      "valorFinal": 68029.50000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 220 X 90",
+      "valorFinal": 67374.615,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 210 X 120",
+      "valorFinal": 66874.50000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 210
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 200 X 100",
+      "valorFinal": 65023.03500000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 200 X 90",
+      "valorFinal": 64049.37,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 200 X 80",
+      "valorFinal": 64373.92500000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 200 X 60",
+      "valorFinal": 63063.00000000001,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 190 x 90",
+      "valorFinal": 64373.92500000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 190
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 190 x 80",
+      "valorFinal": 63987.00000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 190
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 x 90",
+      "valorFinal": 62915.16000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 x 85",
+      "valorFinal": 62752.30500000001,
+      "type": "rectangular",
+      "medida1": 85,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 x 80",
+      "valorFinal": 62428.905000000006,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 x 75",
+      "valorFinal": 62104.35000000001,
+      "type": "rectangular",
+      "medida1": 75,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 180 x 60",
+      "valorFinal": 62104.35000000001,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 170 X 90",
+      "valorFinal": 62590.60500000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 170
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 160 X 100",
+      "valorFinal": 62590.60500000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 160 X 90",
+      "valorFinal": 62104.35000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 160 X 80",
+      "valorFinal": 60644.43000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 156 X 80",
+      "valorFinal": 59944.50000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 156
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 155 X 90",
+      "valorFinal": 60175.50000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 155
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 150 X 120",
+      "valorFinal": 62832.00000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 150 X 100",
+      "valorFinal": 62360.76000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 150 X 90",
+      "valorFinal": 59671.920000000006,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 150 X 80",
+      "valorFinal": 58050.30000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 150 X 70",
+      "valorFinal": 57564.045000000006,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 120",
+      "valorFinal": 60319.87500000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 100",
+      "valorFinal": 59944.50000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 90",
+      "valorFinal": 59185.66500000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 85",
+      "valorFinal": 57401.19,
+      "type": "rectangular",
+      "medida1": 85,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 80",
+      "valorFinal": 56914.935000000005,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 140 X 70",
+      "valorFinal": 55293.315,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 130 X 90",
+      "valorFinal": 56266.98000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 130 X 80",
+      "valorFinal": 54969.91500000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 130 X 70",
+      "valorFinal": 53834.55000000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 130 X 60",
+      "valorFinal": 53245.50000000001,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 120 X 90",
+      "valorFinal": 52051.23000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 120 X 80",
+      "valorFinal": 51240.420000000006,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 120 X 70",
+      "valorFinal": 49455.94500000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 100 X 70",
+      "valorFinal": 48969.69,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 100 X 60",
+      "valorFinal": 48158.880000000005,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 90 X 60",
+      "valorFinal": 35739.16500000001,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 90
+    },
+    {
+      "category": "ENCASTRABLE MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR PARA 60 X 40",
+      "valorFinal": 28091.910000000003,
+      "type": "rectangular",
+      "medida1": 40,
+      "medida2": 60
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 250 X 140 - agregado",
+      "valorFinal": 89166,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 250
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 260 X 90",
+      "valorFinal": 77847,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 260
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 240 X 120",
+      "valorFinal": 75306,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 240
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 220 X 120",
+      "valorFinal": 72996,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 220 X 80",
+      "valorFinal": 71494.5,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 220
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 200 X 110",
+      "valorFinal": 68838,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 200 X 100",
+      "valorFinal": 67221.00000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 190 x 90",
+      "valorFinal": 66874.50000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 190
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 180 x 100",
+      "valorFinal": 66528.00000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 180 x 90",
+      "valorFinal": 65835.00000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 180 x 80",
+      "valorFinal": 64680.00000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 170 x 90",
+      "valorFinal": 65142.00000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 170
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 160 x 90",
+      "valorFinal": 65835.00000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 160 X 80",
+      "valorFinal": 62947.50000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 150 X 90",
+      "valorFinal": 61677.00000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 150 X 80",
+      "valorFinal": 60291.00000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 140 X 90",
+      "valorFinal": 60002.25000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 140 X 85",
+      "valorFinal": 59598.00000000001,
+      "type": "rectangular",
+      "medida1": 85,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 140 X 80",
+      "valorFinal": 58789.50000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 140 X 70",
+      "valorFinal": 57288.00000000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 130 X 80",
+      "valorFinal": 54978.00000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 120 X 80",
+      "valorFinal": 53476.50000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 120 X 70",
+      "valorFinal": 52321.50000000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 110 X 60",
+      "valorFinal": 47701.50000000001,
+      "type": "rectangular",
+      "medida1": 60,
+      "medida2": 110
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA RECTANGULAR",
+      "desc": "ENCASTRABLE RECTANGULAR CON FLECOS PARA 100 X 70",
+      "valorFinal": 47701.50000000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 70 x 70",
+      "valorFinal": 47186.37,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 70
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 85 X 85",
+      "valorFinal": 48158.880000000005,
+      "type": "rectangular",
+      "medida1": 85,
+      "medida2": 85
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 90 x 90",
+      "valorFinal": 52537.48500000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 90
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 100 x 100",
+      "valorFinal": 54645.36000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 110 x 110",
+      "valorFinal": 55440.00000000001,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 110
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 120 X 120",
+      "valorFinal": 57077.79000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 125 X 125 agregado",
+      "valorFinal": 59509.065,
+      "type": "rectangular",
+      "medida1": 125,
+      "medida2": 125
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 130 X 130 agregado",
+      "valorFinal": 60319.87500000001,
+      "type": "rectangular",
+      "medida1": 130,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 140 X 140 agregado",
+      "valorFinal": 62752.30500000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 145 X 145 agregado",
+      "valorFinal": 64698.48000000001,
+      "type": "rectangular",
+      "medida1": 145,
+      "medida2": 145
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 150 X 150 agregado",
+      "valorFinal": 69887.89500000002,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 160 X 160 agregado",
+      "valorFinal": 74427.04500000001,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 170 X 170 agregado",
+      "valorFinal": 79616.46000000002,
+      "type": "rectangular",
+      "medida1": 170,
+      "medida2": 170
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 180 x 180 agregado",
+      "valorFinal": 95893.87500000001,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "ENCASTRABLE MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO 200 x 200 agregado",
+      "valorFinal": 99518.26500000001,
+      "type": "rectangular",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 70 x 70",
+      "valorFinal": 50011.50000000001,
+      "type": "rectangular",
+      "medida1": 70,
+      "medida2": 70
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 80 X 80",
+      "valorFinal": 50935.50000000001,
+      "type": "rectangular",
+      "medida1": 80,
+      "medida2": 80
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 90 x 90",
+      "valorFinal": 55324.50000000001,
+      "type": "rectangular",
+      "medida1": 90,
+      "medida2": 90
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 100 x 100",
+      "valorFinal": 57519.00000000001,
+      "type": "rectangular",
+      "medida1": 100,
+      "medida2": 100
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 110 x 110",
+      "valorFinal": 58327.50000000001,
+      "type": "rectangular",
+      "medida1": 110,
+      "medida2": 110
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 120 X 120",
+      "valorFinal": 59251.50000000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 130 X 130 agregado",
+      "valorFinal": 65142.00000000001,
+      "type": "rectangular",
+      "medida1": 130,
+      "medida2": 130
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 140 X 140 agregado",
+      "valorFinal": 66874.50000000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 150 X 150 agregado",
+      "valorFinal": 69877.5,
+      "type": "rectangular",
+      "medida1": 150,
+      "medida2": 150
+    },
+    {
+      "category": "ENCASTRABLE CON FLECOS PARA MESA CUADRADA",
+      "desc": "ENCASTRABLE CUADRADO CON FLECOS 170 X 170 agregado",
+      "valorFinal": 83622,
+      "type": "rectangular",
+      "medida1": 170,
+      "medida2": 170
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 160 x 120",
+      "valorFinal": 59833.62,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 160
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 180 x 140",
+      "valorFinal": 62254.50000000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 180
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 200 x 140",
+      "valorFinal": 63563.115000000005,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 200
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 250 x 140",
+      "valorFinal": 69077.08500000002,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 250
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 300 x 140",
+      "valorFinal": 76048.66500000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 300
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 300 x 160 agregado",
+      "valorFinal": 85245.93000000001,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 300
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 300 x 180 agregado",
+      "valorFinal": 89780.46000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 300
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 230 x 180 agregado",
+      "valorFinal": 85244.77500000001,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 230
+    },
+    {
+      "category": "RECTANGULAR SIMIL LINO CON BIES",
+      "desc": "RECTANGULAR 420 x 200 agregado",
+      "valorFinal": 112058.10000000002,
+      "type": "rectangular",
+      "medida1": 200,
+      "medida2": 420
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 1,60 X 1,20",
+      "valorFinal": 60319.87500000001,
+      "type": "rectangular",
+      "medida1": 120,
+      "medida2": 160
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 1,80 X 1,40",
+      "valorFinal": 65008.020000000004,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 180
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,00 X 1,40",
+      "valorFinal": 66968.05500000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 200
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,20 X 1,40",
+      "valorFinal": 70449.225,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 220
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,50 X 1,40",
+      "valorFinal": 73292.83500000002,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 250
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,00 X 1,40",
+      "valorFinal": 79291.90500000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 300
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,00 x 1,60 agregado",
+      "valorFinal": 81312,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 200
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,40 x 1,60 agregado",
+      "valorFinal": 79579.5,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 240
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,60 x 1,60 agregado",
+      "valorFinal": 82836.6,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 260
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,60 x 1,80 agregado",
+      "valorFinal": 86278.5,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 260
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,80 x 1,60 agregado",
+      "valorFinal": 89397,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 280
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,00 x 1,60 agregado",
+      "valorFinal": 88172.7,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 300
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,50 X 1,60 agregado",
+      "valorFinal": 96430.95000000003,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 350
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 4,40 x 1,60 agregado",
+      "valorFinal": 111931.05000000002,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 440
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 2,20 X 1,80 agregado",
+      "valorFinal": 86902.2,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 220
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,00 X 1,80 agregado",
+      "valorFinal": 95541.60000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 300
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,50 X 1,80 agregado",
+      "valorFinal": 100623.60000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 350
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,80 X 1,70 agregado",
+      "valorFinal": 104308.05000000002,
+      "type": "rectangular",
+      "medida1": 170,
+      "medida2": 380
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 4,00 x 1,80 agregado",
+      "valorFinal": 106976.10000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 400
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 4,00 x 2,30 agregado",
+      "valorFinal": 115153.50000000001,
+      "type": "rectangular",
+      "medida1": 230,
+      "medida2": 400
+    },
+    {
+      "category": "MANTEL RECTANGULAR CON FLECOS",
+      "desc": "RECTANGULAR 3,40 X 2,10 agregado",
+      "valorFinal": 103313.59500000002,
+      "type": "rectangular",
+      "medida1": 210,
+      "medida2": 340
+    },
+    {
+      "category": "CUADRADO TEXTURADO SIMIL LINO BIES",
+      "desc": "CUADRADO 140 X 140",
+      "valorFinal": 56590.38000000001,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "CUADRADO TEXTURADO SIMIL LINO BIES",
+      "desc": "CUADRADO 160 X 160 AGREGADO",
+      "valorFinal": 61779.795000000006,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "CUADRADO TEXTURADO SIMIL LINO BIES",
+      "desc": "CUADRADO 180 X 180 AGREGADO",
+      "valorFinal": 67941.72000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "CUADRADO TEXTURADO SIMIL LINO BIES",
+      "desc": "CUADRADO 200 X 200 AGREGADO",
+      "valorFinal": 83622,
+      "type": "rectangular",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "CUADRADO TEXTURADO SIMIL LINO BIES",
+      "desc": "CUADRADO 200 X 200 AGREGADO",
+      "valorFinal": 109725.00000000001,
+      "type": "rectangular",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "MANTEL CUADRADO CON FLECOS",
+      "desc": "CUADRADO 140 X 140",
+      "valorFinal": 58699.41,
+      "type": "rectangular",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "MANTEL CUADRADO CON FLECOS",
+      "desc": "CUADRADO 160 X 160 agregado",
+      "valorFinal": 64698.48000000001,
+      "type": "rectangular",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "MANTEL CUADRADO CON FLECOS",
+      "desc": "CUADRADO 180 X 180 agregado",
+      "valorFinal": 71508.36000000002,
+      "type": "rectangular",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "MANTEL CUADRADO CON FLECOS",
+      "desc": "CUADRADO 200 x 200 agregado",
+      "valorFinal": 87657.57,
+      "type": "rectangular",
+      "medida1": 200,
+      "medida2": 200
+    }
+  ],
+  "tapir": [
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,20",
+      "valorFinal": 47997.18000000001,
+      "type": "redondo",
+      "medida1": 120,
+      "medida2": 120
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,40",
+      "valorFinal": 51687.405000000006,
+      "type": "redondo",
+      "medida1": 140,
+      "medida2": 140
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,60",
+      "valorFinal": 56034.82500000001,
+      "type": "redondo",
+      "medida1": 160,
+      "medida2": 160
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 1,80",
+      "valorFinal": 65512.75500000001,
+      "type": "redondo",
+      "medida1": 180,
+      "medida2": 180
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 2,00",
+      "valorFinal": 69146.38500000001,
+      "type": "redondo",
+      "medida1": 200,
+      "medida2": 200
+    },
+    {
+      "category": "REDONDOS CON BIES",
+      "desc": "REDONDO BIES 2,20",
+      "valorFinal": 71346.66000000002,
+      "type": "redondo",
+      "medida1": 220,
+      "medida2": 220
+    }
+  ]
+}
