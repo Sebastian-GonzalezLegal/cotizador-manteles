@@ -55,7 +55,7 @@ export default function App() {
   const [medida2, setMedida2] = useState(200);
   const [linea, setLinea] = useState('lino');
   const [estilo, setEstilo] = useState('con_caida');
-  const [agregado, setAgregado] = useState('ninguno');
+  const [agregado, setAgregado] = useState('bies');
 
   // 2. Estados de Operación e Integración
   const [loading, setLoading] = useState(false);
@@ -310,7 +310,6 @@ export default function App() {
             <div className="form-group">
               <label className="form-label">Terminación (Agregado)</label>
               <select className="form-select" value={agregado} onChange={(e) => setAgregado(e.target.value)}>
-                <option value="ninguno">Sin agregado</option>
                 <option value="bies">Con Bies</option>
                 <option value="flecos">Con Flecos</option>
               </select>
